@@ -22,7 +22,7 @@ app.use(express.static('public'));
 //--------------------//
 const dburl="mongodb+srv://Shruthi_11:shruthi2003@testing.rcoxf.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
 mongoose.connect(dburl, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(result => app.listen(3000))
+  .then(result => app.listen(process.env.PORT || 3000))
   .catch(err => console.log(err));
 app.use(express.urlencoded({ extended: true }));
 
