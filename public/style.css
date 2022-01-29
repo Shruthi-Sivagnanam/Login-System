@@ -1,0 +1,111 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+body{
+    font-family: sans-serif;
+}
+.container{
+    background-image: url("/bg.jpg");
+    height: 100vh;
+    width:100%;
+    background-position: center;
+    background-size: cover;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.login-container{
+    background-color: hsla(201, 100%, 6%, 0.6);
+    padding: 50px 40px;
+    min-width:10px;
+    width:50%;
+    max-width: 500px;
+}
+.welcome-message{
+    color:white;
+    text-align: center;
+    font-weight: 400;
+    font-size: 30px;
+    margin:0px;
+    margin-bottom: 20px;
+}
+.input-grid{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.input-grid label{
+    color:white;
+    font-weight: lighter;
+    margin-bottom: 10px;
+}
+.input-grid input{
+    background-color:hsla(201, 100%, 91%, 0.3) ;
+    padding: 7px;
+    border: 1px solid hsl(201, 100%, 6%);
+    color:white;
+    outline: none;
+}
+.input-grid input:focus{
+    border: 1px solid hsl(201, 100%, 50%);
+}
+.login-button{
+    width:100%;
+    margin-bottom:20px;
+    padding: 7px;
+    cursor: pointer;
+    outline: none;
+    color:white;
+    background-color:hsla(201, 100%, 50%, 0.1);
+    border-radius: 5px;
+    border: 1px solid hsla(201, 100%, 50%, 0.1);
+}
+.login-button:hover{
+    background-color:hsla(201, 100%, 50%, 0.5);
+}
+#demo{
+    padding:5px;
+    color:red;
+}
+.login-container .link{
+    padding: 10px;
+    text-align: center;
+}
+.login-container a{
+    color: white;
+    text-decoration: none;
+}
+.fail{
+    text-align: center;
+    color: red;
+    padding: 10px;
+}
+.fail-list{
+    color: red;
+    padding: 10px;
+}
+.success{
+    text-align: center;
+    color: #228B22;
+    padding: 10px;
+}
+::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: black;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: black;
+  }
+@media screen and (max-width:450px) {
+    .login-container{
+        padding: 40px;
+	margin-left:0px;
+	margin-right:0px;
+    } 
+}

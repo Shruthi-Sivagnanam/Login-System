@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <%-include('./partials/head.ejs')%>
+    <body>
+        <div class="container">
+            <div class="login-container">
+                <h3 class="welcome-message">Welcome</h3>
+                <%if (num2==1) {%>
+                    <p class="success">Register successfully!!</p>
+                <%} %>
+                <%if (num2==-1) {%>
+                    <p class="fail">Wrong Creditals</p>
+                <%} %>
+                <form action="/login" method="POST">
+                    <div class="input-grid">
+                        <label for="username">Username</label>
+                        <input type="text"id="username"name="username" required>
+                    </div>
+                    <div class="input-grid">
+                        <label for="password">Password</label>
+                        <input type="password"id="password"name="password"required >
+                    </div>
+                    <button class="login-button" type="submit" >Sign In</button>
+                </form>
+                <div class="link">
+                    Don't have an account? | 
+                    <a href="/register">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

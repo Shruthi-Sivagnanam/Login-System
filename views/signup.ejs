@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <%-include('./partials/head.ejs')%>
+    <body>
+        <div class="container">
+            <div class="login-container">
+                <h3 class="welcome-message">Hi new user!!</h3>
+                <%if (num1==-1) {%>
+                    <p class="fail">Wrong cerditals</p>
+                    <ul class="fail-list">
+                        <li>May be not a unique username</li>
+                        <li>Email already exists</li>
+                        <li>Password length is more or less than 4</li>
+                    </ul>
+                <%}%>
+                <form action="/register" method="POST">
+                    <div class="input-grid">
+                        <label for="username">User name</label>
+                        <input type="text"  id="username" name="username" required placeholder="Unique Username">
+                    </div>
+                    <div class="input-grid">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="Email Id ">
+                    </div>
+                    <div class="input-grid">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required placeholder="4-Numbered Password">
+                        <p class="fail" id="pass"></p>
+                    </div>
+                    <button class="login-button" type="submit">Sign-up</button>
+                </form>
+                <div class="link">
+                    Do you have an account? | 
+                    <a href="/login">Login</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
